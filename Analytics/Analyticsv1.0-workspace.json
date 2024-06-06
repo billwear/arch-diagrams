@@ -1,0 +1,453 @@
+{
+    "configuration": {},
+    "description": "Description",
+    "documentation": {},
+    "id": 92487,
+    "lastModifiedAgent": "structurizr-cloud/dsl-editor/b48f13f4-8892-4330-9cb7-dade22178976",
+    "lastModifiedDate": "2024-06-04T09:17:41Z",
+    "lastModifiedUser": "angel.fernandez@canonical.com",
+    "model": {
+        "customElements": [
+            {
+                "id": "7",
+                "name": "Charmed Kubeflow",
+                "properties": {
+                    "structurizr.dsl.identifier": "ckf"
+                },
+                "relationships": [
+                    {
+                        "description": "Is built on",
+                        "destinationId": "6",
+                        "id": "15",
+                        "properties": {
+                            "structurizr.dsl.identifier": "9ecbda7e-d8c4-4f66-afc6-774b369923a4"
+                        },
+                        "sourceId": "7",
+                        "tags": "Relationship"
+                    }
+                ],
+                "tags": "Element"
+            },
+            {
+                "id": "8",
+                "name": "Data Science Stack",
+                "properties": {
+                    "structurizr.dsl.identifier": "dss"
+                },
+                "relationships": [
+                    {
+                        "description": "Is built on",
+                        "destinationId": "6",
+                        "id": "16",
+                        "properties": {
+                            "structurizr.dsl.identifier": "83619d3d-cfc0-4e15-9fa8-e59a6ab85f10"
+                        },
+                        "sourceId": "8",
+                        "tags": "Relationship"
+                    },
+                    {
+                        "description": "Is built on",
+                        "destinationId": "9",
+                        "id": "17",
+                        "properties": {
+                            "structurizr.dsl.identifier": "60a8c90a-6518-4b22-ac8d-6b68ec3a24ba"
+                        },
+                        "sourceId": "8",
+                        "tags": "Relationship"
+                    }
+                ],
+                "tags": "Element"
+            },
+            {
+                "id": "9",
+                "name": "Charmed MLflow",
+                "properties": {
+                    "structurizr.dsl.identifier": "mlf"
+                },
+                "relationships": [
+                    {
+                        "description": "Is built on",
+                        "destinationId": "6",
+                        "id": "18",
+                        "properties": {
+                            "structurizr.dsl.identifier": "0bd1f178-5e1b-48cb-8b3f-ae9ee694d57b"
+                        },
+                        "sourceId": "9",
+                        "tags": "Relationship"
+                    }
+                ],
+                "tags": "Element"
+            }
+        ],
+        "people": [
+            {
+                "id": "1",
+                "location": "Unspecified",
+                "name": "User",
+                "properties": {
+                    "structurizr.dsl.identifier": "user"
+                },
+                "relationships": [
+                    {
+                        "description": "Uses",
+                        "destinationId": "3",
+                        "id": "10",
+                        "properties": {
+                            "structurizr.dsl.identifier": "eef680a9-92fc-457f-ac63-4f6c2a0a4491"
+                        },
+                        "sourceId": "1",
+                        "tags": "Relationship"
+                    }
+                ],
+                "tags": "Element,Person"
+            },
+            {
+                "id": "2",
+                "location": "Unspecified",
+                "name": "Data scientists, ML engineers",
+                "properties": {
+                    "structurizr.dsl.identifier": "targetuser"
+                },
+                "tags": "Element,Person"
+            }
+        ],
+        "softwareSystems": [
+            {
+                "documentation": {},
+                "id": "3",
+                "location": "Unspecified",
+                "name": "Analytics Platform",
+                "properties": {
+                    "structurizr.dsl.identifier": "analytics"
+                },
+                "relationships": [
+                    {
+                        "description": "Provides a cloud-based scalable solution",
+                        "destinationId": "7",
+                        "id": "11",
+                        "properties": {
+                            "structurizr.dsl.identifier": "a10cf3df-c2b7-41fa-ad7b-d8744a35d67d"
+                        },
+                        "sourceId": "3",
+                        "tags": "Relationship"
+                    },
+                    {
+                        "description": "Offers a ready-to-run environment",
+                        "destinationId": "8",
+                        "id": "12",
+                        "properties": {
+                            "structurizr.dsl.identifier": "bf8cec0b-2309-4344-b14c-35bf7767bcd9"
+                        },
+                        "sourceId": "3",
+                        "tags": "Relationship"
+                    },
+                    {
+                        "description": "Manages end-to-end machine learning lifecycle",
+                        "destinationId": "9",
+                        "id": "13",
+                        "properties": {
+                            "structurizr.dsl.identifier": "384e8ca2-b6e1-48cc-8135-49d11af9346c"
+                        },
+                        "sourceId": "3",
+                        "tags": "Relationship"
+                    },
+                    {
+                        "description": "Developed for",
+                        "destinationId": "2",
+                        "id": "14",
+                        "properties": {
+                            "structurizr.dsl.identifier": "86e26495-a0d6-4044-bcf4-9225822394a8"
+                        },
+                        "sourceId": "3",
+                        "tags": "Relationship"
+                    }
+                ],
+                "tags": "Element,Software System"
+            },
+            {
+                "documentation": {},
+                "id": "4",
+                "location": "Unspecified",
+                "name": "Juju",
+                "properties": {
+                    "structurizr.dsl.identifier": "juju"
+                },
+                "relationships": [
+                    {
+                        "description": "Deploys",
+                        "destinationId": "7",
+                        "id": "19",
+                        "properties": {
+                            "structurizr.dsl.identifier": "233eb6ca-17f2-4a30-9298-882cf5e0955d"
+                        },
+                        "sourceId": "4",
+                        "tags": "Relationship"
+                    },
+                    {
+                        "description": "Deploys",
+                        "destinationId": "9",
+                        "id": "20",
+                        "properties": {
+                            "structurizr.dsl.identifier": "c67bf498-3271-48d1-9743-5d4fb50067f8"
+                        },
+                        "sourceId": "4",
+                        "tags": "Relationship"
+                    }
+                ],
+                "tags": "Element,Software System"
+            },
+            {
+                "documentation": {},
+                "id": "5",
+                "location": "Unspecified",
+                "name": "Snapcraft",
+                "properties": {
+                    "structurizr.dsl.identifier": "snap"
+                },
+                "relationships": [
+                    {
+                        "description": "Builds",
+                        "destinationId": "8",
+                        "id": "21",
+                        "properties": {
+                            "structurizr.dsl.identifier": "fc24ad1e-407d-4bf7-b9f7-1fea79864651"
+                        },
+                        "sourceId": "5",
+                        "tags": "Relationship"
+                    }
+                ],
+                "tags": "Element,Software System"
+            },
+            {
+                "documentation": {},
+                "id": "6",
+                "location": "Unspecified",
+                "name": "MicroK8s",
+                "properties": {
+                    "structurizr.dsl.identifier": "microk8s"
+                },
+                "tags": "Element,Software System"
+            }
+        ]
+    },
+    "name": "Analyticsv1.0",
+    "properties": {
+        "structurizr.dsl": "d29ya3NwYWNlICJBbmFseXRpY3N2MS4wInsKCiAgICBtb2RlbCB7CiAgICAKICAgICAgICAjIHVzZXIgcGVyc29uYQogICAgICAgIHVzZXIgPSBwZXJzb24gIlVzZXIiCiAgICAgICAgdGFyZ2V0VXNlciA9IHBlcnNvbiAiRGF0YSBzY2llbnRpc3RzLCBNTCBlbmdpbmVlcnMiCiAgICAgICAgCiAgICAgICAgYW5hbHl0aWNzID0gc29mdHdhcmVTeXN0ZW0gIkFuYWx5dGljcyBQbGF0Zm9ybSIKICAgICAgICBqdWp1ID0gc29mdHdhcmVTeXN0ZW0gIkp1anUiCiAgICAgICAgc25hcCA9IHNvZnR3YXJlU3lzdGVtICJTbmFwY3JhZnQiCiAgICAgICAgbWljcm9rOHMgPSBzb2Z0d2FyZVN5c3RlbSAiTWljcm9LOHMiCiAgICAgICAgY2tmID0gZWxlbWVudCAiQ2hhcm1lZCBLdWJlZmxvdyIgCiAgICAgICAgZHNzID0gZWxlbWVudCAiRGF0YSBTY2llbmNlIFN0YWNrIiAKICAgICAgICBtbGYgPSBlbGVtZW50ICJDaGFybWVkIE1MZmxvdyIgCiAgICAgICAgCiAgICAgICAgIyBSRUxBVElPTlNISVBTCiAgICAgICAgdXNlciAtPiBhbmFseXRpY3MgIlVzZXMiCiAgICAgICAgYW5hbHl0aWNzIC0+IGNrZiAiUHJvdmlkZXMgYSBjbG91ZC1iYXNlZCBzY2FsYWJsZSBzb2x1dGlvbiIKICAgICAgICBhbmFseXRpY3MgLT4gZHNzICJPZmZlcnMgYSByZWFkeS10by1ydW4gZW52aXJvbm1lbnQiCiAgICAgICAgYW5hbHl0aWNzIC0+IG1sZiAiTWFuYWdlcyBlbmQtdG8tZW5kIG1hY2hpbmUgbGVhcm5pbmcgbGlmZWN5Y2xlIgogICAgICAgIGFuYWx5dGljcyAtPiB0YXJnZXRVc2VyICJEZXZlbG9wZWQgZm9yIgogICAgICAgIAogICAgICAgIGNrZiAtPiBtaWNyb2s4cyAiSXMgYnVpbHQgb24iCiAgICAgICAgZHNzIC0+IG1pY3JvazhzICJJcyBidWlsdCBvbiIKICAgICAgICBkc3MgLT4gbWxmICJJcyBidWlsdCBvbiIKICAgICAgICBtbGYgLT4gbWljcm9rOHMgIklzIGJ1aWx0IG9uIgogICAgICAgIAogICAgICAgIGp1anUgLT4gY2tmICJEZXBsb3lzIgogICAgICAgIGp1anUgLT4gbWxmICJEZXBsb3lzIgogICAgICAgIHNuYXAgLT4gZHNzICJCdWlsZHMiCiAgICB9CgogICAgdmlld3MgewogICAgICAgIHN5c3RlbUNvbnRleHQgYW5hbHl0aWNzICJTeXN0ZW1Db250ZXh0IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgfQogICAgICAgIAogICAgICAgIHN5c3RlbUxhbmRzY2FwZSAiQW5hbHl0aWNzTGFuZHNjYXBlIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0IGxyCiAgICAgICAgfQoKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJTb2Z0d2FyZSBTeXN0ZW0iIHsKICAgICAgICAgICAgICAgIG1ldGFkYXRhIGZhbHNlCiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMxMTY4YmQKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsKICAgICAgICAgICAgICAgIG1ldGFkYXRhIGZhbHNlCiAgICAgICAgICAgICAgICBzaGFwZSBwZXJzb24KICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzA4NDI3YgogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQogICAgCn0KCg=="
+    },
+    "revision": 7,
+    "views": {
+        "configuration": {
+            "branding": {},
+            "lastSavedView": "AnalyticsLandscape",
+            "metadataSymbols": "SquareBrackets",
+            "styles": {
+                "elements": [
+                    {
+                        "background": "#1168bd",
+                        "color": "#ffffff",
+                        "metadata": false,
+                        "tag": "Software System"
+                    },
+                    {
+                        "background": "#08427b",
+                        "color": "#ffffff",
+                        "metadata": false,
+                        "shape": "Person",
+                        "tag": "Person"
+                    }
+                ]
+            },
+            "terminology": {}
+        },
+        "systemContextViews": [
+            {
+                "automaticLayout": {
+                    "applied": false,
+                    "edgeSeparation": 0,
+                    "implementation": "Graphviz",
+                    "nodeSeparation": 300,
+                    "rankDirection": "TopBottom",
+                    "rankSeparation": 300,
+                    "vertices": false
+                },
+                "elements": [
+                    {
+                        "id": "1",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "2",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "3",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "7",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "8",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "9",
+                        "x": 0,
+                        "y": 0
+                    }
+                ],
+                "enterpriseBoundaryVisible": true,
+                "key": "SystemContext",
+                "order": 1,
+                "relationships": [
+                    {
+                        "id": "10"
+                    },
+                    {
+                        "id": "11"
+                    },
+                    {
+                        "id": "12"
+                    },
+                    {
+                        "id": "13"
+                    },
+                    {
+                        "id": "14"
+                    },
+                    {
+                        "id": "17"
+                    }
+                ],
+                "softwareSystemId": "3"
+            }
+        ],
+        "systemLandscapeViews": [
+            {
+                "automaticLayout": {
+                    "applied": true,
+                    "edgeSeparation": 0,
+                    "implementation": "Graphviz",
+                    "nodeSeparation": 300,
+                    "rankDirection": "LeftRight",
+                    "rankSeparation": 300,
+                    "vertices": false
+                },
+                "dimensions": {
+                    "height": 2759,
+                    "width": 3800
+                },
+                "elements": [
+                    {
+                        "id": "1",
+                        "x": 199,
+                        "y": 1234
+                    },
+                    {
+                        "id": "2",
+                        "x": 1674,
+                        "y": 1559
+                    },
+                    {
+                        "id": "3",
+                        "x": 899,
+                        "y": 1284
+                    },
+                    {
+                        "id": "4",
+                        "x": 1649,
+                        "y": 350
+                    },
+                    {
+                        "id": "5",
+                        "x": 899,
+                        "y": 2259
+                    },
+                    {
+                        "id": "6",
+                        "x": 3149,
+                        "y": 954
+                    },
+                    {
+                        "id": "7",
+                        "x": 2399,
+                        "y": 350
+                    },
+                    {
+                        "id": "8",
+                        "x": 1649,
+                        "y": 2259
+                    },
+                    {
+                        "id": "9",
+                        "x": 2399,
+                        "y": 954
+                    }
+                ],
+                "enterpriseBoundaryVisible": true,
+                "key": "AnalyticsLandscape",
+                "order": 2,
+                "relationships": [
+                    {
+                        "id": "10"
+                    },
+                    {
+                        "id": "11",
+                        "vertices": [
+                            {
+                                "x": 1649,
+                                "y": 200
+                            },
+                            {
+                                "x": 2099,
+                                "y": 200
+                            }
+                        ]
+                    },
+                    {
+                        "id": "12"
+                    },
+                    {
+                        "id": "13"
+                    },
+                    {
+                        "id": "14"
+                    },
+                    {
+                        "id": "15"
+                    },
+                    {
+                        "id": "16"
+                    },
+                    {
+                        "id": "17",
+                        "vertices": [
+                            {
+                                "x": 2099,
+                                "y": 2109
+                            }
+                        ]
+                    },
+                    {
+                        "id": "18"
+                    },
+                    {
+                        "id": "19"
+                    },
+                    {
+                        "id": "20"
+                    },
+                    {
+                        "id": "21"
+                    }
+                ]
+            }
+        ]
+    }
+}
