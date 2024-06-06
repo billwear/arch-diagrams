@@ -65,9 +65,6 @@ workspace {
         		tempsvc = component "Temporal Service" {
 	        		tags "maascomp"
 		        }
-        		tempwrkrsvc = component "Temporal Worker" {
-	        		tags "maascomp"
-		        }
         		webappsvc = component "Web Application Service" {
 	        		tags "maascomp"
 		        }
@@ -135,7 +132,6 @@ workspace {
         statmonsvc -> dns "monitors health of"
         statsvc -> psql "reads and writes to"
         tempsvc -> statmonsvc "spawns"
-        tempsvc -> tempwrkrsvc "spawns"
         u -> api "Uses scripts or CLI"
         u -> nginx "Uses Web UI"
         webappsvc -> psqlsvc "consumes"
