@@ -4,10 +4,10 @@ workspace {
         u = person "User"
         m = softwareSystem "MAAS" {
             rack = container "Rack controller" {
-                tags "extracomp
+                tags "extracomp"
             }
             tftp = container "TFTP server" {
-                tags "maascomp
+                tags "maascomp"
             }
             psql = container "MAAS DB" {
                 tags "extracomp"
@@ -29,22 +29,13 @@ workspace {
     		    httpsvc = component "HTTP Service" {
 	    		    tags "maascomp"
 		        }
-    		    impresprogsvc = component "Import Resources Progress Service" {
-	    		    tags "maascomp"
-		        }
         		impressvc = component "Import Resources Service" {
 	        		tags "maascomp"
 		        }
-        		ipcmainsvc = component "IPC Master Service" {
-	        		tags "maascomp"
-		        }
-        		ipcwrkrsvc = component "IPC Worker Service" {
+        		ipcsvc = component "IPC Master Service" {
 	        		tags "maascomp"
 		        }
         		ntpsvc = component "Network Time Protocol Service" {
-	        		tags "maascomp"
-		        }
-        		promexpsvc = component "Prometheus Exporter Service" {
 	        		tags "maascomp"
 		        }
         		promsvc = component "Prometheus Service" {
@@ -119,18 +110,16 @@ workspace {
         dbtsksvc -> regcsvc "proxies for"
         httpsvc -> psqlsvc "consumes"
         imageserver -> region "Downloads supported images"
-        impresprogsvc -> webappsvc "updates"
+        impressvc -> webappsvc "updates"
         impressvc -> imageserver "downloads from"
-        impressvc -> impresprogsvc "updates"
         impressvc -> psqlsvc "consumes"
-        ipcwrkrsvc -> racksvc "spawns"
-        ipcwrkrsvc -> regsvc "spawns"
+        ipcsvc -> racksvc "spawns"
+        ipcsvc -> regsvc "spawns"
         nginx -> httpsvc "passes commands to"
         ntpsvc -> ntp "updates"
         prometheus -> loki "uses rules from"
-        promexpsvc -> prometheus "exports to"
+        promsvc -> prometheus "writes observations to"
         promsvc -> loki "updates rules in"
-        promsvc -> promexpsvc "writes observations to"
         promsvc -> statsvc "updates service status"
         psqlsvc -> psql "listens to"
         rack -> machinerack "to provision"
@@ -153,6 +142,21 @@ workspace {
     }
 
     views {
+        systemLandscape {
+            include *
+            autolayout tb
+        }
+        systemContext m {
+            include *
+            autolayout tb
+        }
+        container m {
+            include *
+            autolayout tb
+        }
+        component region {
+            include *
+        }
         styles {
             element "maascomp" {
                 background #1168bd
